@@ -8,4 +8,4 @@ puts "----------"
 # Your code goes here ...
 @store3 = Store.find_by(id: 3)
 @store3.destroy
-puts "Stores in database: #{Store.count}"
+print_store_count

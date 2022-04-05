@@ -24,4 +24,8 @@ gastown_store = Store.create(
   mens_apparel: true
 )
 
-puts "Stores in database: #{Store.count}"
+def print_store_count
+  puts "Stores in database: AR::count #{Store.count}, class callback count #{Store.store_count}"  
+end
+
+print_store_count
