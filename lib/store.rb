@@ -28,5 +28,9 @@ class Store < ActiveRecord::Base
     @@store_count -= 1
   end
 
+  before_destroy do 
+    self.employees.count == 0 #Preclude destruction of stores with employees
+  end
+
   
 end
