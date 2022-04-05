@@ -10,3 +10,12 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+
+print "Enter store name: "
+name = gets.chomp
+user_store = Store.new(name: name)
+user_store.save
+
+user_store.errors.each do |err|
+  puts "Error while validating property: #{err} - #{user_store.errors[err]}"
+end
